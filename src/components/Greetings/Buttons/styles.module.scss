@@ -1,0 +1,47 @@
+@use '@/styles/variables';
+@use '@/styles/mixis';
+
+.component__style {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  opacity: 0;
+  animation: fade .4s forwards 1.5s;
+
+  button {
+    width: max-content;
+    height: 4rem;
+    padding-inline: 2.8rem;
+    border: none;
+    border-radius: 2rem;
+    background: variables.$gradient-200;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+  }
+
+  &[data-exit=true] {
+    button {
+      animation: fade .4s forwards reverse;
+    }
+  }
+
+  @include mixis.desktopScreen() {
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

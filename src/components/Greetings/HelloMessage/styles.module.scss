@@ -1,0 +1,28 @@
+@use '@/styles/variables';
+
+.component__style {
+  font-size: 6.4rem;
+  font-weight: 600;
+  color: variables.$brand-100;
+  opacity: 0;
+  animation: fade 2s forwards 1.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+}

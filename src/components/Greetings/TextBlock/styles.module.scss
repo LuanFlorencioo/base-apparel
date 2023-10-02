@@ -1,0 +1,37 @@
+@use "@/styles/variables";
+
+.component__style {
+  width: max-content;
+  text-align: center;
+  user-select: none;
+
+  p:first-child {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: variables.$brand-100;
+    opacity: 0;
+    animation: fade .4s forwards 1s;
+  }
+  
+  p:last-child {
+    font-size: 1.6rem;
+    color: variables.$brand-200;
+    opacity: 0;
+    animation: fade .4s forwards 1s;
+  }
+
+  &[data-exit=true] {
+    animation: fade .4s forwards reverse;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
