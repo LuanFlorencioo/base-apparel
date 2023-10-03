@@ -1,0 +1,30 @@
+.component__style {
+  width: 37.5rem;
+  height: 250px;
+  margin-inline: auto;
+  opacity: 0;
+  animation: fade .4s forwards 2s;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 1080px) {
+    width: 61rem;
+    height: 80rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
