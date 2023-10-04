@@ -1,0 +1,9 @@
+@use '@/styles/animations';
+
+.component__style {
+  position: absolute;
+  right: calc(6rem + 1.2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  @include animations.scale(.4s);
+}

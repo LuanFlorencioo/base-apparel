@@ -1,0 +1,61 @@
+@mixin fade($delay: 0s) {
+  opacity: 0;
+  animation: fade_animation .4s forwards $delay;
+}
+
+@keyframes fade_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin fade_left($delay: 0s) {
+  opacity: 0;
+  animation: fade_left_animation .4s forwards $delay;
+}
+
+@keyframes fade_left_animation {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin fade_right($delay: 0s) {
+  opacity: 0;
+  animation: fade_right_animation .4s forwards $delay;
+}
+
+@keyframes fade_right_animation {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin scale($delay: 0s) {
+  opacity: 0;
+  animation: scale_animation .4s forwards $delay;
+}
+
+@keyframes scale_animation {
+  from {
+    opacity: 0;
+    scale: .8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}

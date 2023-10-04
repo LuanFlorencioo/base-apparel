@@ -1,4 +1,5 @@
 @use '@/styles/variables';
+@use '@/styles/animations';
 
 .component__style {
   width: 100%;
@@ -18,7 +19,7 @@
     text-transform: uppercase;
     color: variables.$brand-200;
     opacity: 0;
-    animation: fade .4s forwards 1s;
+    @include animations.fade_right(.5s);
     
     b {
       font-weight: 600;
@@ -31,8 +32,7 @@
     font-size: 1.4rem;
     font-weight: 400;
     color: variables.$brand-200;
-    opacity: 0;
-    animation: fade .4s forwards 1.5s;
+    @include animations.fade_right(1s);
   }
 
   @media (min-width: 1080px) {
@@ -46,16 +46,5 @@
     p:nth-child(1) {
       font-size: 6.4rem;
     }
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

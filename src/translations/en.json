@@ -1,0 +1,9 @@
+{
+  "title": {
+    "thin": "we're",
+    "bold": "coming soon"
+  },
+  "description": "Hello fellow shoppers! We're currently building our new fashion store. Add you email below to stay up-to-date with announcements and our lauch deals.",
+  "input_placeholder": "Email Address",
+  "alert": "Please provide a valid email"
+}

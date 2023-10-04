@@ -1,11 +1,14 @@
-import s from './styles.module.scss'
+import { useStore } from '@/store'
 import Form from './Form'
+import s from './styles.module.scss'
 
 export default function Section() {
+  const { title, description } = useStore.getState().translations
+
   return (
     <section className={s.component__style}>
-      <p>we{"'"}re <b>coming soon</b></p>
-      <p>Hello fellow shoppers! We{"'"}re currently building our new fashion store. Add you email below to stay up-to-date with announcements and our lauch deals.</p>
+      <p>{title.thin} <b>{title.bold}</b></p>
+      <p>{description}</p>
 
       <Form />
     </section>

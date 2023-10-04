@@ -1,22 +1,23 @@
 'use client'
 
 import { FormEventHandler, ChangeEventHandler, useState } from 'react'
-import Image from 'next/image'
-import Arrow from '@/assets/icon-arrow.svg'
-import Error from '@/assets/icon-error.svg'
+import { useStore } from '@/store'
+import { validateEmail } from './validateEmail'
+import Input from './Input'
+import IconError from './IconError'
+import ButtonSubmit from './ButtonSubmit'
+import Alert from './Alert'
 import s from './styles.module.scss'
 
 export default function Form() {
   const [ userEmail, setUserEmail ] = useState('')
   const [ isInvalidEmail, setIsInvalidEmail ] = useState(false)
+  const { translations } = useStore()
+
   const submit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    
-    const regex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
-    const validEmail = regex.test(userEmail)
-    if (!validEmail) {
-      return setIsInvalidEmail(true)
-    }
+    const { ok } = validateEmail(userEmail)
+    if (!ok) return setIsInvalidEmail(true)
   }
 
   const handleChangeInput: ChangeEventHandler<HTMLInputElement> = (e) => {
@@ -28,31 +29,23 @@ export default function Form() {
 
   return (
     <form className={s.component__style} onSubmit={submit}>
-      <input
+      <Input
         type="text"
         name="email"
         id="email"
-        placeholder='Endereço de Email'
+        placeholder={translations.input_placeholder}
         autoComplete='off'
         onChange={handleChangeInput}
         data-invalid={isInvalidEmail}
       />
 
-      {
-        isInvalidEmail && <Image src={Error} alt='Icon Error' />
-      }
+      {isInvalidEmail && <IconError />}
 
-      <button type="submit">
-        <Image src={Arrow} alt='icon arrow' priority/>
-      </button>
+      <ButtonSubmit />
 
-      {
-        isInvalidEmail && (
-          <span>
-            Please provide a valid email
-          </span>
-        )
-      }
+      {isInvalidEmail && (
+        <Alert>{translations.alert}</Alert>
+      )}
     </form>
   )
 }

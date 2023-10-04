@@ -1,0 +1,9 @@
+{
+  "title": {
+    "thin": "Em",
+    "bold": "Breve"
+  },
+  "description": "Olá! Atualmente estamos construindo nossa nova loja de moda. Adicione seu e-mail abaixo para se manter atualizado com os anúncios e nossas ofertas de lançamento.",
+  "input_placeholder": "Endereço de Email",
+  "alert": "Por favor forneça um email válido"
+}
