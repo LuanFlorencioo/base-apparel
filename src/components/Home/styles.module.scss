@@ -32,4 +32,9 @@
       }
     }
   }
+
+  ::selection {
+    background: variables.$brand-100;
+    color: variables.$brand-300;
+  }
 }
