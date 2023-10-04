@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](/src/assets/logo.svg)
 
-## Getting Started
+# Base Apparel
 
-First, run the development server:
+Landing Page que anuncia o lançamento de uma loja de moda online. Desafio proposto pela plataforma [Frontend Mentor](https://www.frontendmentor.io/home), onde pude praticar minhas habilidades e desenvolver um projeto real.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[🔗 Clique aqui](https://lf-base-apparel.vercel.app/), ou, acesse: https://lf-base-apparel.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙ Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **React**
+- **Next.js**
+- **Typescript**
+- **Sass**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧠 Aprendizados
 
-## Learn More
+Para este desafio, escolhi utilizar Sass como biblioteca de estilização que agregou muito conhecimento e aprendizado.
 
-To learn more about Next.js, take a look at the following resources:
+A começar pelas animações, onde pude liberar minha criatividade e fazer transições e animações dos componentes da minha maneira e a que mais me achou interessante.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Demonstração
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Demo](/public/demo.gif)
 
-## Deploy on Vercel
+![App Screenshot](/public/mockup.jpg)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
